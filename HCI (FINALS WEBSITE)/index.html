@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Femmora</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('pink.jpg');
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    h2 {
+      color: black;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .card {
+      float: center;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card-body h5 {
+      font-size: 18px;
+    }
+
+    .btn-primary, .btn-success, .btn-secondary {
+      width: 100%;
+      padding: 10px;
+
+    }
+
+    table {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    table th, table td {
+      text-align: center;
+    }
+
+    form input, form textarea {
+      border-radius: 5px;
+    }
+
+    .custom-navbar {
+      background-color: lightpink;
+    }
+
+    .custom-navbar .navbar-brand {
+      color: white;
+      font-size: 30px;
+    }
+
+    .custom-navbar .nav-link {
+      color: white;
+      margin-right: 15px;
+    }
+
+    .custom-navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+  background-color: lightpink;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+    footer {
+      background-color: lightpink;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">Femmora</a>
+      <div>
+        <a class="nav-link d-inline-block" href="products.html">Products</a>
+        <a class="nav-link d-inline-block" href="cart.html">Cart</a>
+        <a class="nav-link d-inline-block" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mt-5 text-center">
+    <h2>Welcome to Femmora Shop</h2>
+    <h3>Dress Bold, Dress Beautiful!</h3>
+    <a href="products.html" class="btn" style="background-color: lightpink; color: white; float: center;">Shop Now</a>
+  </main>
+
+  <section class="container my-5">
+    <h4 class="text-left section-title">New Arrivals</h4>
+  <div class="row">
+
+    <div class="col-6 col-md-3 mb-4">
+      <div class="card text-center">
+        <img src="crochet dress.jpg" class="card-img-top" alt="New Arrival">
+        <div class="card-body">
+          <h5 class="card-title">White Dress</h5>
+           <a href="products.html" class="btn" style="background-color: lightpink; color: white; float: center;">Shop Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <div class="card text-center">
+        <img src="fav dress.jpg" class="card-img-top" alt="New Arrival">
+        <div class="card-body">
+          <h5 class="card-title">Slit Dress</h5>
+           <a href="products.html" class="btn" style="background-color: lightpink; color: white; float: center;">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+
+  <footer class="text-center text-white py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Femmora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

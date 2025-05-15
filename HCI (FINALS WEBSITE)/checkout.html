@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+      background-image: url('pink.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: lightpink;
+      color: white;
+      padding: 12px;
+      margin-top: 20px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .summary {
+      background-color: #fff0f5;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .confirmation {
+      text-align: center;
+      color: green;
+      margin-top: 20px;
+    }
+
+    .custom-navbar {
+      background-color: lightpink;
+    }
+
+    .custom-navbar .navbar-brand {
+      color: white;
+      font-size: 30px;
+    }
+
+    .custom-navbar .nav-link {
+      color: white;
+      margin-right: 15px;
+    }
+
+    .custom-navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: lightpink;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <h1>Femmora</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+
+    <div class="summary">
+      <!-- Order summary will be populated here -->
+    </div>
+
+    <form id="checkoutForm">
+      <label>Full Name</label>
+      <input type="text" required>
+
+      <label>Email Address</label>
+      <input type="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" required>
+
+      <label>Shipping Address</label>
+      <textarea rows="3" required></textarea>
+
+      <label>Payment Method</label>
+      <select required>
+        <option value="">Select a payment method</option>
+        <option>GCash</option>
+        <option>PayPal</option>
+        <option>Cash on Delivery</option>
+      </select>
+
+      <label>
+        <input type="checkbox" required> I agree to the terms and conditions
+      </label>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <div class="confirmation" id="confirmationMsg" style="display:none;">
+      Thank you for your order! A confirmation has been sent to your email.
+    </div>
+  </div>
+
+  <footer class="text-center text-white py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Femmora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Confirmation script -->
+  <script>
+    const form = document.getElementById('checkoutForm');
+    const confirmation = document.getElementById('confirmationMsg');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      confirmation.style.display = 'block';
+      form.reset();
+      localStorage.removeItem('cart'); // Optional: clear cart after order
+    });
+  </script>
+</body>
+</html
